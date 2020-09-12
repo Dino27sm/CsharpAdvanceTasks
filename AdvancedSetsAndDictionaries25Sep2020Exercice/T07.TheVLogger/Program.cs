@@ -46,18 +46,15 @@ namespace T07.TheVLogger
             foreach (var kvp in vloggerFollowers.OrderByDescending(x => x.Value.Count)
                 .ThenBy(y => vloggerFollowings[y.Key].Count))
             {
+                Console.WriteLine($"{counterOne}. {kvp.Key} : {kvp.Value.Count} followers, {vloggerFollowings[kvp.Key].Count} following");
                 if (counterOne == 1)
                 {
-                    Console.WriteLine($"{counterOne++}. {kvp.Key} : {kvp.Value.Count} followers, {vloggerFollowings[kvp.Key].Count} following");
                     foreach (var item in kvp.Value)
                     {
                         Console.WriteLine($"*  {item}");
                     }
                 }
-                else
-                {
-                    Console.WriteLine($"{counterOne++}. {kvp.Key} : {kvp.Value.Count} followers, {vloggerFollowings[kvp.Key].Count} following");
-                }
+                counterOne++;
             }
         }
     }
