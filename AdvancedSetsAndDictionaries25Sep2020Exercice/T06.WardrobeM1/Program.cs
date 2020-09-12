@@ -29,13 +29,13 @@ namespace T06.WardrobeM1
             }
             string[] findClothes = Console.ReadLine().Split();
             string colorFind = findClothes[0];
-            string dressFind = findClothes[1];
+            string clothFind = findClothes[1];
             foreach (var kvp in dressColor)
             {
                 Console.WriteLine($"{kvp.Key} clothes:");
                 foreach (var item in kvp.Value)
                 {
-                    if (kvp.Key == colorFind && item.Key == dressFind)
+                    if (kvp.Key == colorFind && item.Key == clothFind)
                     {
                         Console.WriteLine($"* {item.Key} - {item.Value} (found!)");
                     }
