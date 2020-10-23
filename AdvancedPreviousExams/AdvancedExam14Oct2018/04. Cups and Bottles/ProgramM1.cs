@@ -8,8 +8,7 @@ namespace T04.CupsBottlesM1
     {
         static void Main(string[] args)
         {
-            int[] cupsArray = Console.ReadLine().Split().Select(int.Parse).Reverse().ToArray();
-            Stack<int> cups = new Stack<int>(cupsArray);
+            Stack<int> cups = new Stack<int>(Console.ReadLine().Split().Select(int.Parse).Reverse());
             Stack<int> bottles = new Stack<int>(Console.ReadLine().Split().Select(int.Parse));
             int wastedWater = 0;
             int waterOut = 0;
